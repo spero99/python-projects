@@ -1,16 +1,19 @@
 #p17095/input arabic number output latin number
 
-selected_num =int(input("select your number from 1-3999:"))
-xiliada=selected_num //1000
+selected_num =int(input("select your number from 1-1000000:"))
+myrio=selected_num%10000000//1000000
+ek_xiliada=selected_num%1000000//100000
+dek_xiliada=selected_num%100000//10000
+xiliada=selected_num %10000//1000
 ekatontada=selected_num % 1000 // 100
 dekada =selected_num % 100 //10
 monada =selected_num % 10
 #confirm the input number is corrrect
 
 if  selected_num<1 :
-    print ("learn to read ,number must be from 1-3999")
-elif selected_num>3999:
-    print ("learn to read ,number must be from 1-3999")
+    print ("learn to read ,number must be from 1-1000000")
+elif selected_num>1000000:
+    print ("learn to read ,number must be from 1-1000000")
 else:
     #change the first digit
     if xiliada>1:
@@ -18,7 +21,45 @@ else:
     else:
         lat_xiliada=''
 
-    #second digit
+    #ekato xiliades
+    if ekatontada==9:
+        lat_ekatontada='CM'
+    elif ekatontada >=5 and ekatontada<9:
+        help6=ekatontada-5
+        lat_ekatontada='D'+ help6*'C'
+    elif ekatontada==4:
+        lat_ekatontada='CD'
+    else:
+        lat_ekatontada= 'C'*ekatontada
+
+
+
+    #deka xiliades
+    if ekatontada==9:
+        lat_ekatontada='CM'
+    elif ekatontada >=5 and ekatontada<9:
+        help5=ekatontada-5
+        lat_ekatontada='D'+ help5*'C'
+    elif ekatontada==4:
+        lat_ekatontada='CD'
+    else:
+        lat_ekatontada= 'C'*ekatontada
+
+
+
+    #xiliada
+    if xiliada==9:
+        lat_xiliada='CM'
+    elif xiliada >=5 and xiliada<9:
+        help4=xiliada-5
+        lat_xiliada='V'+ help4*'C'
+    elif xiliada==4:
+        lat_xiliada='CD'
+    else:
+        lat_xiliada= 'C'*xiliada
+
+
+    #ekantontades
     if ekatontada==9:
         lat_ekatontada='CM'
     elif ekatontada >=5 and ekatontada<9:
@@ -29,7 +70,7 @@ else:
     else:
         lat_ekatontada= 'C'*ekatontada
 
-    #third digit
+    #dekades
     if dekada==9 :
         lat_dekada='XC'
     elif dekada >= 5and monada<9:
@@ -42,7 +83,7 @@ else:
 
 
 
-    #fourth digit
+    #monades
     if monada==9:
         lat_monada='IX'
     elif monada>=5 and monada<9:
