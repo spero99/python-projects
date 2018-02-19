@@ -16,39 +16,45 @@ elif selected_num>1000000:
     print ("learn to read ,number must be from 1-1000000")
 else:
     #change the first digit
-    if xiliada>1:
-        lat_xiliada= 'M'*xiliada
+    if myrio==1:
+        lat_myrio= 'M'                                                          #need change on latin numerals(overbars)
     else:
-        lat_xiliada=''
+        lat_myrio=''
 
     #ekato xiliades
-    if ekatontada==9:
-        lat_ekatontada='CM'
-    elif ekatontada >=5 and ekatontada<9:
-        help6=ekatontada-5
-        lat_ekatontada='D'+ help6*'C'
-    elif ekatontada==4:
-        lat_ekatontada='CD'
+    if myrio==0 and ek_xiliada==0:                                                #need change on latin numerals(overbars)
+        lat_ekxiliada=''
+    elif ek_xiliada==9:
+        lat_ekxiliada='CM'
+    elif ek_xiliada >=5 and ek_xiliada<9:
+        help6=ek_xiliada-5
+        lat_ekxiliada='D'+ help6*'C'
+    elif ek_xiliada==4:
+        lat_ekxiliada='CD'
     else:
-        lat_ekatontada= 'C'*ekatontada
+        lat_ekxiliada= 'C'*ek_xiliada
 
 
 
     #deka xiliades
-    if ekatontada==9:
-        lat_ekatontada='CM'
-    elif ekatontada >=5 and ekatontada<9:
-        help5=ekatontada-5
-        lat_ekatontada='D'+ help5*'C'
-    elif ekatontada==4:
-        lat_ekatontada='CD'
+    if myrio==0 and ek_xiliada==0 and dek_xiliada==0:                              #need change on latin numerals(overbars)
+        lat_dekxiliada=''
+    elif dek_xiliada==9:
+        lat_dekxiliada='CM'
+    elif dek_xiliada>=5 and dek_xiliada<9:
+        help5=dek_xiliada-5
+        lat_dekxiliada='D'+ help5*'C'
+    elif dek_xiliada==4:
+        lat_dekxiliada='CD'
     else:
-        lat_ekatontada= 'C'*ekatontada
+        lat_dekxiliada= 'C'*dek_xiliada
 
 
 
     #xiliada
-    if xiliada==9:
+    if myrio==0 and ek_xiliada==0 and dek_xiliada==0 and xiliada==0:                #need change on latin numerals(overbars)
+        lat_xiliada=''
+    elif xiliada==9:
         lat_xiliada='CM'
     elif xiliada >=5 and xiliada<9:
         help4=xiliada-5
@@ -60,7 +66,9 @@ else:
 
 
     #ekantontades
-    if ekatontada==9:
+    if myrio==0 and ek_xiliada==0 and dek_xiliada==0 and xiliada==0 and ekatontada==0:
+        lat_ekatontada=''
+    elif ekatontada==9:
         lat_ekatontada='CM'
     elif ekatontada >=5 and ekatontada<9:
         help1=ekatontada-5
@@ -71,7 +79,9 @@ else:
         lat_ekatontada= 'C'*ekatontada
 
     #dekades
-    if dekada==9 :
+    if myrio==0 and ek_xiliada==0 and dek_xiliada==0 and xiliada==0 and ekatontada==0:
+        lat_dekada=''
+    elif dekada==9 :
         lat_dekada='XC'
     elif dekada >= 5and monada<9:
         help2=dekada-5
@@ -95,4 +105,4 @@ else:
         lat_monada='I'*monada
     #result
 
-    print ("the latin numeral for your number is:" + lat_xiliada+lat_ekatontada+lat_dekada+lat_monada )
+    print ("the latin numeral for your number is:" +lat_myrio+lat_ekxiliada+lat_dekxiliada+ lat_xiliada+lat_ekatontada+lat_dekada+lat_monada )
