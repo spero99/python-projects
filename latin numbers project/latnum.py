@@ -17,7 +17,7 @@ elif selected_num>1000000:
 else:
     #change the first digit
     if myrio==1:
-        lat_myrio= 'M'                                                          #need change on latin numerals(overbars)
+        lat_myrio= '-M'                                                          #need change on latin numerals(overbars)
     else:
         lat_myrio=''
 
@@ -25,14 +25,14 @@ else:
     if myrio==0 and ek_xiliada==0:                                                #need change on latin numerals(overbars)
         lat_ekxiliada=''
     elif ek_xiliada==9:
-        lat_ekxiliada='CM'
+        lat_ekxiliada='-C-M'
     elif ek_xiliada >=5 and ek_xiliada<9:
         help6=ek_xiliada-5
-        lat_ekxiliada='D'+ help6*'C'
+        lat_ekxiliada='-D'+ help6*'-C'
     elif ek_xiliada==4:
-        lat_ekxiliada='CD'
+        lat_ekxiliada='-C-D'
     else:
-        lat_ekxiliada= 'C'*ek_xiliada
+        lat_ekxiliada= '-C'*ek_xiliada
 
 
 
@@ -40,14 +40,14 @@ else:
     if myrio==0 and ek_xiliada==0 and dek_xiliada==0:                              #need change on latin numerals(overbars)
         lat_dekxiliada=''
     elif dek_xiliada==9:
-        lat_dekxiliada='CM'
+        lat_dekxiliada='-X-C'
     elif dek_xiliada>=5 and dek_xiliada<9:
         help5=dek_xiliada-5
-        lat_dekxiliada='D'+ help5*'C'
+        lat_dekxiliada='-L'+ help5*'-X'
     elif dek_xiliada==4:
-        lat_dekxiliada='CD'
+        lat_dekxiliada='-XD'
     else:
-        lat_dekxiliada= 'C'*dek_xiliada
+        lat_dekxiliada= '-X'*dek_xiliada
 
 
 
@@ -55,14 +55,14 @@ else:
     if myrio==0 and ek_xiliada==0 and dek_xiliada==0 and xiliada==0:                #need change on latin numerals(overbars)
         lat_xiliada=''
     elif xiliada==9:
-        lat_xiliada='CM'
+        lat_xiliada='-M-X'
     elif xiliada >=5 and xiliada<9:
         help4=xiliada-5
-        lat_xiliada='V'+ help4*'C'
+        lat_xiliada='-V'+ help4*'-M'
     elif xiliada==4:
-        lat_xiliada='CD'
+        lat_xiliada='-M-V'
     else:
-        lat_xiliada= 'C'*xiliada
+        lat_xiliada= 'M'*xiliada
 
 
     #ekantontades
