@@ -34,7 +34,7 @@ week1=calendar[0:14]
 week2=calendar[14:28]
 week3=calendar[28:42]
 week4=calendar[42:56]
-week5=calendar[56:70]
+week5=calendar[56:70+count]
 
 
 print(month_name+" "+str(year))
