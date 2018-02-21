@@ -1,27 +1,8 @@
 #p17095/creation of a table like calendar of the selected month
 import datetime
-#year = int(input("enter the year you want:"))
 
-#month = int(input("enter the month you want(1-12):"))
-'''if year<1900:
-    print("Not valid.Select year >1900")
-    year = int(input("enter the year you want:"))
-    month = int(input("enter the month you want(1-12):"))
-if month<0 or month>12:
-    print("Not valid.Select month between 1-12")
-    year = int(input("enter the year you want:"))
-    month = int(input("enter the month you want(1-12):"))
-'''
-while True:
-    try:
-        year = int(input("enter the year you want:"))
-        month = int(input("enter the month you want(1-12):"))
-        while month<0 or month>12:
-            print("month must be between1-12")
-            month = int(input("enter the month you want(1-12):"))
-        break
-    except VallueError:
-        print("not valid inputs")
+year = int(input("enter the year you want:"))
+month = int(input("enter the month you want(1-12):"))
 
 FirstOfMonth=datetime.date(year , month,1)
 start=int(FirstOfMonth.strftime("%w"))
